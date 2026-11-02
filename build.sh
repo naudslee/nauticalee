@@ -2,17 +2,19 @@
 # Stitches _src/*.body.html between the shared letterhead and footer. Run: ./build.sh
 set -euo pipefail
 cd "$(dirname "$0")"
+CSSV=$(cat assets/styles.css assets/script.js | md5sum | cut -c1-8)
 build() {
   local name="$1" title="$2" desc="$3" path="$4" ch="" cc=""
   [ "$name" = index ] && ch='aria-current="page"'
   [ "$name" = contact ] && cc='aria-current="page"'
-  TITLE="$title" DESC="$desc" PATH_="$path" CH="$ch" CC="$cc" python3 -I -c '
+  TITLE="$title" DESC="$desc" PATH_="$path" CH="$ch" CC="$cc" CSSV="$CSSV" python3 -I -c '
 import os
 h=open("_src/head.html").read()
-for k,v in {"{{TITLE}}":"TITLE","{{DESC}}":"DESC","{{PATH}}":"PATH_","{{CUR_HOME}}":"CH","{{CUR_CONTACT}}":"CC"}.items():
+for k,v in {"{{TITLE}}":"TITLE","{{DESC}}":"DESC","{{PATH}}":"PATH_","{{CUR_HOME}}":"CH","{{CUR_CONTACT}}":"CC","{{CSSV}}":"CSSV"}.items():
     h=h.replace(k,os.environ[v])
 print(h,end="")' > "$name.html"
-  cat "_src/$name.body.html" _src/foot.html >> "$name.html"
+  cat "_src/$name.body.html" >> "$name.html"
+  sed "s/{{CSSV}}/$CSSV/" _src/foot.html >> "$name.html"
   echo "built $name.html"
 }
 build index "Nautica Lee Consulting" \
