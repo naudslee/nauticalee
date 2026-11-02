@@ -38,7 +38,7 @@ a { color: var(--sage-deep); text-decoration: underline; text-decoration-thickne
 a:hover { color: var(--ink); }
 p { margin: 0 0 1.1em; }
 h1, h2 { font-family: var(--display); font-weight: 400; line-height: 1.15; margin: 0 0 0.6em; letter-spacing: -0.01em; }
-h1 { font-size: clamp(2rem, 4.4vw, 3rem); }
+h1 { font-size: clamp(2rem, 4.4vw, 3rem); text-wrap: balance; }
 h2 { font-size: clamp(1.5rem, 2.8vw, 1.9rem); }
 h3 { font-weight: 400; font-size: 1.15rem; margin: 0 0 0.2em; }
 em { font-style: italic; }
@@ -71,8 +71,11 @@ em { font-style: italic; }
 
 /* opening */
 .opening { padding: clamp(3rem, 7vw, 5.5rem) 0 0; display: grid; grid-template-columns: 1.4fr 1fr; gap: 2rem 3rem; align-items: center; }
+.opening > div { min-width: 0; max-width: 100%; }
 .opening h1 { margin-bottom: 0.9rem; }
 .opening .kicker { margin-bottom: 1.6rem; display: block; }
+.kicker span { white-space: nowrap; }
+.kicker span:not(:last-child)::after { content: "\00a0\00b7"; }
 .opening p { max-width: 38ch; font-size: 1.15rem; color: var(--ink-soft); }
 .opening .bouquet { justify-self: end; width: min(100%, 260px); height: auto; }
 .opening .after { margin-top: 1.4rem; display: flex; gap: 2rem; flex-wrap: wrap; align-items: baseline; }
@@ -153,10 +156,14 @@ button:hover { background: var(--sage-deep); border-color: var(--sage-deep); }
   h2 { font-size: 1.45rem; }
   h3 { font-size: 1.05rem; }
   .mono { font-size: 0.64rem; letter-spacing: 0.14em; }
-  .opening { grid-template-columns: 1fr; gap: 1.25rem; padding-top: 2.5rem; }
-  .opening .bouquet { order: -1; justify-self: start; width: 120px; margin-bottom: 0; }
+  .opening { grid-template-columns: 1fr; gap: 1rem; padding-top: 2.25rem; text-align: center; justify-items: center; }
+  .opening .bouquet { order: -1; width: 110px; margin-bottom: 0.25rem; justify-self: center; }
+  .opening h1 { max-width: 20ch; }
+  .opening p { margin-inline: auto; }
   .opening p, .contact-top p { font-size: 1rem; }
-  .opening .after { gap: 1.25rem; }
+  .opening .after { gap: 1.25rem; justify-content: center; }
+  .letterhead .line { flex-direction: column; align-items: center; text-align: center; gap: 0.5rem; padding-bottom: 0.8rem; }
+  .letterhead .brand { width: auto; }
   .intro { font-size: 1.02rem; }
   .two-col, .note, .pair, .ways { grid-template-columns: 1fr; }
   .two-col { gap: 2.5rem; }
@@ -170,7 +177,6 @@ button:hover { background: var(--sage-deep); border-color: var(--sage-deep); }
   .note .side span + span::before { content: "\00a0\00b7\00a0"; }
   .signature { font-size: 1.7rem; }
   .letterhead nav a { margin-left: 1.1rem; }
-  .letterhead .brand { width: 100%; }
   .rule { margin-block: 2.5rem; width: auto; margin-inline: 0; }
   .letterhead .line, footer .line { width: auto; margin-inline: 0; padding-inline: 1.25rem; }
   footer .line { flex-direction: column; gap: 0.5rem; }
