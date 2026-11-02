@@ -44,5 +44,4 @@ The form on `contact.html` posts to Formspree. Create a free form at formspree.i
 - Replace the placeholder photo blocks (the green gradient squares) with real photos
 - Swap the three placeholder testimonials for real ones
 - Update social links in `_src/foot.html` and `_src/contact.body.html`
-- Set the real email address if it isn't `hello@nauticalee.com`
 - Add the Formspree ID
