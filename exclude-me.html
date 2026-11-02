@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exclude this device | Nautica Lee Consulting</title>
+  <meta name="description" content="Turns off visitor counting for this browser.">
+  <link rel="canonical" href="https://nauticalee.com/exclude-me.html">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nautica Lee Consulting">
+  <meta property="og:title" content="Exclude this device | Nautica Lee Consulting">
+  <meta property="og:description" content="Turns off visitor counting for this browser.">
+  <meta property="og:url" content="https://nauticalee.com/exclude-me.html">
+  <meta property="og:image" content="https://nauticalee.com/assets/brand/logo-sage.png">
+  <meta name="theme-color" content="#6E9277">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Cedarville+Cursive&family=Cutive&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css?v=3a7a80a5">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="4d57b6f3-1c35-4e06-9389-d277b6495883"></script>
+</head>
+<body>
+<a class="visually-hidden" href="#main">Skip to content</a>
+<header class="letterhead">
+  <div class="wide line mono">
+    <a class="brand" href="index.html">Nautica Lee Consulting &nbsp;&middot;&nbsp; Est. 2024</a>
+    <nav>
+      <a href="index.html#services" data-umami-event="Nav: Services">Services</a>
+      <a href="index.html#about" data-umami-event="Nav: About">About</a>
+      <a href="contact.html"  data-umami-event="Nav: Contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="wrap contact-top">
+  <h1>Analytics are off on this device.</h1>
+  <p id="status">This browser will no longer be counted in your visitor numbers. You only need to do this once per device, and you can close this page.</p>
+  <p><a class="lnk" href="index.html">Back to the site</a> &nbsp;&nbsp; <a class="lnk" href="exclude-me.html?undo=1">Count me again</a></p>
+</section>
+<script>
+(function () {
+  var undo = location.search.indexOf("undo=1") !== -1;
+  try {
+    if (undo) { localStorage.removeItem("umami.disabled"); }
+    else { localStorage.setItem("umami.disabled", "1"); }
+  } catch (e) {}
+  if (undo) {
+    document.querySelector("h1").textContent = "Analytics are back on for this device.";
+    document.getElementById("status").textContent = "This browser will be counted again.";
+  }
+})();
+</script>
+</main>
+<footer>
+  <div class="wide line mono">
+    <span>&copy; <span id="year">2026</span> Nautica Lee Consulting</span>
+    <span><a href="mailto:nautica@nauticalee.com" data-umami-event="Email: footer">nautica@nauticalee.com</a></span>
+  </div>
+</footer>
+<script src="assets/script.js?v=3a7a80a5"></script>
+</body>
+</html>

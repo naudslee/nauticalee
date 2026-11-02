@@ -26,4 +26,6 @@ GitHub Pages: Settings, Pages, deploy from branch `main`, folder root. Point nau
 
 ## Notes
 
+- Visiting `nauticalee.com/exclude-me.html` once on a device stops Umami counting that device. `exclude-me.html?undo=1` turns counting back on. The page is hidden from search engines.
+
 - The site is served by GitHub Pages from the `main` branch.

@@ -1,0 +1,18 @@
+<section class="wrap contact-top">
+  <h1>Analytics are off on this device.</h1>
+  <p id="status">This browser will no longer be counted in your visitor numbers. You only need to do this once per device, and you can close this page.</p>
+  <p><a class="lnk" href="index.html">Back to the site</a> &nbsp;&nbsp; <a class="lnk" href="exclude-me.html?undo=1">Count me again</a></p>
+</section>
+<script>
+(function () {
+  var undo = location.search.indexOf("undo=1") !== -1;
+  try {
+    if (undo) { localStorage.removeItem("umami.disabled"); }
+    else { localStorage.setItem("umami.disabled", "1"); }
+  } catch (e) {}
+  if (undo) {
+    document.querySelector("h1").textContent = "Analytics are back on for this device.";
+    document.getElementById("status").textContent = "This browser will be counted again.";
+  }
+})();
+</script>
