@@ -52,10 +52,13 @@ em { font-style: italic; }
 /* double hairline, like the oval border on the logo */
 .rule { height: 5px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin-block: clamp(3rem, 7vw, 5.5rem); }
 .rule.flower { position: relative; }
+.rule.flower::before {
+  content: ""; position: absolute; left: 50%; top: -3px; width: 72px; height: 11px; transform: translateX(-50%);
+  background: var(--paper);
+}
 .rule.flower::after {
-  content: ""; position: absolute; left: 50%; top: 50%; width: 46px; height: 66px; transform: translate(-50%, -50%);
-  background: var(--paper) url("brand/bouquet-sage.png") center / 30px auto no-repeat;
-  outline: 12px solid var(--paper);
+  content: ""; position: absolute; left: 50%; top: 50%; width: 30px; height: 50px; transform: translate(-50%, -50%);
+  background: url("brand/bouquet-sage.png") center / 30px auto no-repeat;
 }
 
 /* letterhead */
