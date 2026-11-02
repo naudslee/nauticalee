@@ -43,8 +43,10 @@ h1 { font-size: clamp(2rem, 4.4vw, 3rem); }
 h2 { font-size: clamp(1.5rem, 2.8vw, 1.9rem); }
 h3 { font-weight: 400; font-size: 1.15rem; margin: 0 0 0.2em; }
 em { font-style: italic; }
-.wrap { width: min(var(--col), 100% - 4rem); margin-inline: auto; }
 .wide { width: min(1040px, 100% - 4rem); margin-inline: auto; }
+.wrap { width: min(1040px, 100% - 4rem); margin-inline: auto; }
+.wrap > * { max-width: var(--col); }
+.wrap.end > * { margin-inline: auto; }
 .mono {
   font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft);
 }
@@ -168,8 +170,7 @@ button:hover, .btn:hover { background: var(--ink); border-color: var(--ink); col
 }
 
 @media (max-width: 760px) {
-  .wrap, .wide { width: min(var(--col), 100% - 2.5rem); }
-  .wide { width: min(1040px, 100% - 2.5rem); }
+  .wrap, .wide { width: min(1040px, 100% - 2.5rem); }
   body { font-size: 1rem; line-height: 1.55; }
   h1 { font-size: 1.9rem; }
   h2 { font-size: 1.45rem; }
