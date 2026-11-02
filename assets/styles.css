@@ -7,7 +7,7 @@
   --muted: #7A8178;
   --rule: #B9BFAE;
   --sage: #6E9277;
-  --sage-deep: #4D6D57;
+  --sage-deep: #466A52;
   --sage-wash: #DCE5D9;
   --serif: "Castoro", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   --display: "Young Serif", "Castoro", Georgia, serif;
@@ -38,6 +38,7 @@ a { color: var(--sage-deep); text-decoration: underline; text-decoration-thickne
 a:hover { color: var(--ink); }
 p { margin: 0 0 1.1em; }
 h1, h2 { font-family: var(--display); font-weight: 400; line-height: 1.15; margin: 0 0 0.6em; letter-spacing: -0.01em; }
+h2 { color: var(--sage-deep); }
 h1 { font-size: clamp(2rem, 4.4vw, 3rem); }
 h2 { font-size: clamp(1.5rem, 2.8vw, 1.9rem); }
 h3 { font-weight: 400; font-size: 1.15rem; margin: 0 0 0.2em; }
@@ -108,6 +109,13 @@ em { font-style: italic; }
 .how li::before { counter-increment: s; content: counter(s, decimal-leading-zero); font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.1em; color: var(--sage-deep); }
 .how li p { margin: 0; }
 
+/* sage band around the note from Nautica */
+.band { background: var(--sage); color: var(--paper); margin: clamp(3rem, 7vw, 5.5rem) 0; padding: clamp(3rem, 6vw, 4.5rem) 0; }
+.band h2, .band a { color: var(--paper); }
+.band .note .side { color: color-mix(in srgb, var(--paper) 80%, var(--sage)); }
+.band .signature { color: var(--paper); }
+.band p { color: var(--paper); }
+
 /* note from Nautica */
 .note { display: grid; grid-template-columns: 1fr 3fr; gap: 2rem 3rem; }
 .note .side span { display: block; }
@@ -145,9 +153,9 @@ input:focus, select:focus, textarea:focus { outline: none; border-bottom-color: 
 ::placeholder { color: var(--muted); font-style: italic; }
 button, .btn {
   display: inline-block; font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase;
-  background: var(--ink); color: var(--paper); border: 1px solid var(--ink); padding: 0.95rem 1.8rem; cursor: pointer; justify-self: start; text-decoration: none;
+  background: var(--sage-deep); color: var(--paper); border: 1px solid var(--sage-deep); padding: 0.95rem 1.8rem; cursor: pointer; justify-self: start; text-decoration: none;
 }
-button:hover, .btn:hover { background: var(--sage-deep); border-color: var(--sage-deep); color: var(--paper); }
+button:hover, .btn:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
 .end .btn { margin-top: 0.75rem; }
 .faq dt { font-size: 1.15rem; margin-top: 1.4rem; }
 .faq dd { margin: 0.3rem 0 0; color: var(--ink-soft); font-size: 1rem; max-width: 60ch; }
@@ -182,6 +190,7 @@ button:hover, .btn:hover { background: var(--sage-deep); border-color: var(--sag
   .signature { font-size: 1.7rem; }
   .letterhead nav a { margin-left: 1.1rem; }
   .rule { margin-block: 2.5rem; width: auto; margin-inline: 0; }
+  .band { margin-block: 2.5rem; padding-block: 2.5rem; }
   .letterhead .line, footer .line { width: auto; margin-inline: 0; padding-inline: 1.25rem; }
   footer .line { flex-direction: column; gap: 0.5rem; }
 }
