@@ -87,7 +87,7 @@ em { font-style: italic; }
 .lnk:hover { color: var(--ink); }
 
 /* short intro */
-.intro { font-size: 1.2rem; max-width: 56ch; }
+.intro { font-size: 1.2rem; max-width: 60ch; margin-inline: auto; }
 
 /* service menu with dotted leaders */
 .menu { margin: 0; padding: 0; list-style: none; }
