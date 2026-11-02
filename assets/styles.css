@@ -43,8 +43,8 @@ h1 { font-size: clamp(2rem, 4.4vw, 3rem); }
 h2 { font-size: clamp(1.5rem, 2.8vw, 1.9rem); }
 h3 { font-weight: 400; font-size: 1.15rem; margin: 0 0 0.2em; }
 em { font-style: italic; }
-.wrap { width: min(var(--col), 100% - 2.5rem); margin-inline: auto; }
-.wide { width: min(1040px, 100% - 2.5rem); margin-inline: auto; }
+.wrap { width: min(var(--col), 100% - 4rem); margin-inline: auto; }
+.wide { width: min(1040px, 100% - 4rem); margin-inline: auto; }
 .mono {
   font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft);
 }
@@ -94,10 +94,6 @@ em { font-style: italic; }
 .menu { margin: 0; padding: 0; list-style: none; }
 .menu li { padding: 1.15rem 0; border-bottom: 1px dotted var(--rule); }
 .menu li:last-child { border-bottom: 0; }
-.menu .row { display: flex; align-items: baseline; gap: 0.75rem; }
-.menu .row h3 { flex: none; }
-.menu .row .dots { flex: 1; border-bottom: 1px dotted var(--rule); transform: translateY(-0.35em); }
-.menu .row .tag { flex: none; font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
 .menu p { margin: 0.25rem 0 0; color: var(--ink-soft); font-size: 1rem; max-width: 60ch; }
 .menu-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem; }
 .menu-head .mono { color: var(--muted); }
@@ -161,7 +157,14 @@ button:hover, .btn:hover { background: var(--ink); border-color: var(--ink); col
 .faq dt { font-size: 1.15rem; margin-top: 1.4rem; }
 .faq dd { margin: 0.3rem 0 0; color: var(--ink-soft); font-size: 1rem; max-width: 60ch; }
 
+@media (max-width: 960px) {
+  .two-col { grid-template-columns: 1fr; gap: 2.5rem; max-width: var(--col); margin-inline: auto; }
+  .opening { grid-template-columns: 1fr 0.6fr; }
+}
+
 @media (max-width: 760px) {
+  .wrap, .wide { width: min(var(--col), 100% - 2.5rem); }
+  .wide { width: min(1040px, 100% - 2.5rem); }
   body { font-size: 1rem; line-height: 1.55; }
   h1 { font-size: 1.9rem; }
   h2 { font-size: 1.45rem; }
@@ -180,7 +183,6 @@ button:hover, .btn:hover { background: var(--ink); border-color: var(--ink); col
   .intro { font-size: 1.02rem; }
   .two-col, .note, .pair, .ways { grid-template-columns: 1fr; }
   .two-col { gap: 2.5rem; }
-  .menu .row .dots, .menu .row .tag { display: none; }
   .menu li { padding: 0.9rem 0; }
   .menu p { font-size: 0.95rem; }
   .how li { grid-template-columns: 2.2rem 1fr; }
