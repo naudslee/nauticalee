@@ -27,4 +27,3 @@ GitHub Pages: Settings, Pages, deploy from branch `main`, folder root. Point nau
 ## Before launch
 
 - Add the Formspree ID
-- Set the real Instagram link in `_src/foot.html` and `_src/contact.body.html`
