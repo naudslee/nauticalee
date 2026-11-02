@@ -16,6 +16,6 @@ print(h,end="")' > "$name.html"
   echo "built $name.html"
 }
 build index "Nautica Lee Consulting" \
-  "Social media, email, media kits, marketing and client management for creators, talent and small businesses. One person behind the scenes, est. 2024." ""
+  "Social media, email, websites, marketing and client management for small businesses. One person behind the scenes, est. 2024." ""
 build contact "Contact | Nautica Lee Consulting" \
   "Tell Nautica Lee Consulting about your business and what you want help with. Replies within one business day." "contact.html"
