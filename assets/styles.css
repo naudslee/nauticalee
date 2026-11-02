@@ -107,7 +107,7 @@ em { font-style: italic; }
 /* how it goes */
 .how { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 1rem; }
 .how li { display: grid; grid-template-columns: 3rem 1fr; gap: 0.5rem; align-items: baseline; }
-.how li::before { counter-increment: s; content: counter(s, decimal-leading-zero); font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.1em; color: var(--sage-deep); }
+.how li::before { counter-increment: s; content: counter(s, decimal-leading-zero); font-family: var(--mono); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.08em; color: var(--sage-deep); }
 .how li p { margin: 0; }
 
 /* sage band around the note from Nautica */
