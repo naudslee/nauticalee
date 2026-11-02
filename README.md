@@ -18,12 +18,12 @@ After editing anything in `_src/`, run `./build.sh`.
 
 ## Contact form
 
-The form posts to Formspree. Create a free form at formspree.io, replace `YOUR_FORM_ID` in `_src/contact.body.html`, rebuild.
+The form posts to Formspree (form ID `mljjopwy`), which emails each submission to nautica@nauticalee.com. Manage it at formspree.io.
 
 ## Deploying
 
 GitHub Pages: Settings, Pages, deploy from branch `main`, folder root. Point nauticalee.com DNS at GitHub Pages (A records plus a `www` CNAME). Netlify or Vercel: connect the repo, no build command, publish directory `/`.
 
-## Before launch
+## Notes
 
-- Add the Formspree ID
+- The site is served by GitHub Pages from the `main` branch.
