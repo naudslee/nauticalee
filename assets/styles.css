@@ -159,7 +159,7 @@ button:hover, .btn:hover { background: var(--sage-deep); border-color: var(--sag
   .opening { grid-template-columns: 1fr; gap: 1rem; padding-top: 2.25rem; text-align: center; justify-items: center; }
   .opening .bouquet { order: -1; width: 110px; margin-bottom: 0.25rem; justify-self: center; }
   .opening h1 { font-size: 1.95rem; }
-  .kicker .k2::after { content: none; }
+  .kicker span.k2::after { content: none; }
   .kicker .k3::before { content: "\A"; white-space: pre; }
   .opening p { margin-inline: auto; }
   .opening p, .contact-top p { font-size: 1rem; }
