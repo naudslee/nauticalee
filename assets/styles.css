@@ -149,7 +149,6 @@ button, .btn {
 }
 button:hover, .btn:hover { background: var(--sage-deep); border-color: var(--sage-deep); color: var(--paper); }
 .end .btn { margin-top: 0.75rem; }
-.form-note { font-size: 1rem; color: var(--muted); margin: 0; }
 .faq dt { font-size: 1.15rem; margin-top: 1.4rem; }
 .faq dd { margin: 0.3rem 0 0; color: var(--ink-soft); font-size: 1rem; max-width: 60ch; }
 
