@@ -16,7 +16,7 @@
   --col: 720px;
 }
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; overflow-x: hidden; }
 body {
   margin: 0;
   background: var(--paper);
@@ -171,6 +171,7 @@ button:hover { background: var(--sage-deep); border-color: var(--sage-deep); }
   .signature { font-size: 1.7rem; }
   .letterhead nav a { margin-left: 1.1rem; }
   .letterhead .brand { width: 100%; }
-  .rule { margin-block: 2.5rem; }
+  .rule { margin-block: 2.5rem; width: auto; margin-inline: 0; }
+  .letterhead .line, footer .line { width: auto; margin-inline: 0; padding-inline: 1.25rem; }
   footer .line { flex-direction: column; gap: 0.5rem; }
 }
