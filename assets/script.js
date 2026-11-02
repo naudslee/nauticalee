@@ -1,4 +1,4 @@
-// Nauticalee — small enhancements (no dependencies)
+// Nautica Lee Consulting: small enhancements, no dependencies
 
 (function () {
   // Theme preview: append ?theme=navy or ?theme=blush to any page URL to

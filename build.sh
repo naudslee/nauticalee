@@ -24,10 +24,10 @@ print(h,end="")' > "$name.html"
 }
 
 build index    "Nautica Lee Consulting | Social Media, Email, Brand and Client Management" \
-  "Nautica Lee Consulting handles social media, inbox and email, media kits, brand building, marketing and client management for creators, talent and small businesses." ""
+  "Nautica Lee Consulting runs social media, email, media kits, brand building, marketing and client management for creators, talent and small businesses." ""
 build services "Services | Nautica Lee Consulting" \
   "Social media management, email and inbox management, media kits, brand building, marketing, client and inquiry management, admin and talent support." "services.html"
 build about    "About Nautica | Nautica Lee Consulting" \
-  "Meet Nautica, the organized, creative partner behind Nautica Lee Consulting. Behind-the-scenes support for creators, talent and small businesses." "about.html"
+  "About Nautica, founder of Nautica Lee Consulting. Social media, email and client management for creators, talent and small businesses." "about.html"
 build contact  "Contact | Nautica Lee Consulting" \
-  "Book a free discovery call with Nautica Lee Consulting. Tell me about your business and what you need help with." "contact.html"
+  "Contact Nautica Lee Consulting. Tell me about your business and what you want help with. Replies within one business day." "contact.html"
