@@ -148,14 +148,29 @@ button:hover { background: var(--sage-deep); border-color: var(--sage-deep); }
 .faq dd { margin: 0.3rem 0 0; color: var(--ink-soft); font-size: 1rem; max-width: 60ch; }
 
 @media (max-width: 760px) {
-  body { font-size: 1.05rem; }
-  .opening { grid-template-columns: 1fr; }
-  .opening .bouquet { order: -1; justify-self: start; width: 150px; margin-bottom: 0.5rem; }
-  .opening p, .contact-top p { font-size: 1.05rem; }
-  .intro { font-size: 1.1rem; }
+  body { font-size: 1rem; line-height: 1.55; }
+  h1 { font-size: 1.9rem; }
+  h2 { font-size: 1.45rem; }
+  h3 { font-size: 1.05rem; }
+  .mono { font-size: 0.64rem; letter-spacing: 0.14em; }
+  .opening { grid-template-columns: 1fr; gap: 1.25rem; padding-top: 2.5rem; }
+  .opening .bouquet { order: -1; justify-self: start; width: 120px; margin-bottom: 0; }
+  .opening p, .contact-top p { font-size: 1rem; }
+  .opening .after { gap: 1.25rem; }
+  .intro { font-size: 1.02rem; }
   .two-col, .note, .pair, .ways { grid-template-columns: 1fr; }
-  .note .side { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+  .two-col { gap: 2.5rem; }
+  .menu .row .dots, .menu .row .tag { display: none; }
+  .menu li { padding: 0.9rem 0; }
+  .menu p { font-size: 0.95rem; }
+  .how li { grid-template-columns: 2.2rem 1fr; }
+  .note { gap: 1rem; }
+  .note .side { display: block; line-height: 1.6; }
   .note .side span { display: inline; }
+  .note .side span + span::before { content: "\00a0\00b7\00a0"; }
+  .signature { font-size: 1.7rem; }
   .letterhead nav a { margin-left: 1.1rem; }
   .letterhead .brand { width: 100%; }
+  .rule { margin-block: 2.5rem; }
+  footer .line { flex-direction: column; gap: 0.5rem; }
 }
